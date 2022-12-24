@@ -10,16 +10,11 @@ import java.util.List;
 @Repository
 @Component
 public class OrderRepository {
-    private HashMap<String,Order> orderMap;
-    private HashMap<String,DeliveryPartner> deliveryPartnerMap;
-    private  HashMap<String, List<String>> orderPartnerPair;
-    private HashMap<String,Integer> orderCountMap;
-    public OrderRepository(){
-        this.orderMap = new HashMap<>();
-        this.deliveryPartnerMap = new HashMap<>();
-        this.orderPartnerPair = new HashMap<>();
-        this.orderCountMap = new HashMap<>();
-    }
+    private HashMap<String,Order> orderMap =new HashMap<>();
+    private HashMap<String,DeliveryPartner> deliveryPartnerMap=new HashMap<>();
+    private  HashMap<String, List<String>> orderPartnerPair = new HashMap<>();
+    private HashMap<String,Integer> orderCountMap = new HashMap<>();
+
     public void addOrder(Order order){
         orderMap.put(order.getId(),order);
     }
